@@ -12,7 +12,8 @@ function App() {
   const [UserName, setUserName] = useState(sessionStorage.getItem('user'));
   
   const showPage = () =>{
-    if(UserName===''){
+    console.log("SHOW PAGE");
+    if(null===UserName || UserName.length===0){
       return <Login setpage={setpage} setUser={setUserName}/> ;
     }
     switch(page){
@@ -26,8 +27,6 @@ function App() {
   }
 
   const logout = () => {
-    
-
     //updating the anime list in storage
     let rawList=localStorage.getItem('animelist');
     if(rawList){
@@ -44,31 +43,28 @@ function App() {
   }
   
   return(
-    <div >
+    < >
     <div className='body'>
       <header>
-          <h1>Anime Schedules</h1>
+          <h1 className='headtext'>Anime Schedules</h1>
       </header>
       <nav>
         <ul>
-          <li>
-            <a href='' onClick={(event)=>{
-            event.preventDefault()
-            setpage('Home')}}>Home</a>
+          <li onClick={(event)=>{
+            event.preventDefault();
+            setpage('Home');}}>Home
           </li>
-          <li>
-            <a href='' onClick={(event)=>{
-              event.preventDefault()
-              setpage('Search')}}>Search</a>
+          <li onClick={(event)=>{
+              event.preventDefault();
+              setpage('Search');}}>Search
           </li>
-          <li>
-            <a href='' onClick={(event)=>{
-              event.preventDefault()
-              setpage('About')}}>About</a>
+          <li onClick={(event)=>{
+              event.preventDefault();
+              setpage('About');}}>About
           </li>
         </ul>
         <p >{UserName}</p>
-        {UserName!=='' &&(
+        {(null!==UserName && UserName.length>0) &&(
         <button className='button' onClick={()=>{ logout() }}>LogOut</button>
         )}
       </nav>
@@ -76,7 +72,7 @@ function App() {
       <div>
         {showPage()}
       </div>
-    </div>
+    </>
   )
 }
 

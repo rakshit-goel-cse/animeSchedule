@@ -1,0 +1,50 @@
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    background-color: rgb(241, 190, 122);
+  }
+  
+  .li {
+    margin: 0;
+    padding: 15px;
+    text-decoration: none;
+    color: #8d41e4;
+    font-size: small;
+    font-weight: normal;
+    transition: color 0.3s ease;
+  }
+  .li:hover{
+    color: #8d41e4;
+    cursor:copy;
+  }
+
+  .card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    margin-bottom: 1vh;
+  }
+  
+  .card p {
+    position: static;
+    margin-left: auto;
+    margin-bottom: 1vh;
+    max-width: 40vh;
+    text-align: left;
+    color: #555;
+  }
+
+  .card img {
+    position: static;
+    margin-top: auto;
+    margin-right: 50%; /* Align the top of the image to the top of the container */
+    width: 40vw; /* Set the width of the image */
+    height: 40vh; 
+  }
