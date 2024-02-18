@@ -29,35 +29,38 @@
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom right, rgb(255, 153, 0), rgb(208, 255, 0),rgb(96, 216, 102)
+    ,rgb(70, 170, 236) ,rgb(243, 97, 199));
   }
 
   .card .content {
-    flex: 1;
+    display: flex;
+    flex: auto;
   }
   
   .card h5, .card h6  {
-        
+    
     margin-bottom: 1vh;
+    max-width: 25vw;
+    width: 25vw;
   }
   
   .card p {
     
     max-width: 40vw;
-    
     text-align: left;
     color: #555;
   }
 
   .card img {
-    
-    
      /* Align the top of the image to the top of the container */
     max-width: 50vw; /* Set the width of the image */
     max-height: 40vh; 
     object-fit: scale-down;
-    align-self: center;
     border-radius: 4px;
-    margin-right: 10px;
+    /*margin-right: 10px;
+    margin-left: 10px;*/
+    margin-left: 15vw;
   }
 
   

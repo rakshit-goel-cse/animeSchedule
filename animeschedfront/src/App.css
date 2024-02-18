@@ -85,3 +85,10 @@ p{
 .button:hover{
   background-color: black;
 }
+
+.backgroundd{
+  background-image: repeating-linear-gradient(to bottom right, rgb(255, 153, 0), rgb(208, 255, 0),rgb(96, 216, 102)
+    ,rgb(70, 170, 236) ,rgb(243, 97, 199),rgb(255, 153, 0));
+    align-self: top;
+    scroll-behavior: auto;
+}

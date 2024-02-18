@@ -81,9 +81,15 @@ function ShowData({data,setdata,ishome}) {
       {data.map((item) => (
         <div key={item.id} className="card">
           <div className="content">
+          <div>
           <h5>{item.title}<br></br>{englishName(item.names)}</h5>
           <h6>Dub Time - {changeTimeZone(item.dubTime)}</h6>
-         
+          </div>
+          <div>
+          <img src={"https://img.animeschedule.net/production/assets/public/img/"+item.imageVersionRoute}
+           alt={item.description}></img>
+          </div>
+          <div>
           <p>
           <b>episode-</b> {item.episodes} <br></br>
           <b>status-</b> {item.status} <br></br>
@@ -92,9 +98,8 @@ function ShowData({data,setdata,ishome}) {
           onClick={(e)=>{addToList(e,item.route)}}>
             {ishome ? "Remove" :isRouteInAnimeList(item.route)?"Remove":"Add to List"}</button>
           </p>
+          </div>
           
-          <img src={"https://img.animeschedule.net/production/assets/public/img/"+item.imageVersionRoute}
-           alt={item.description}></img>
          </div> 
         </div>
       ))}

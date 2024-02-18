@@ -43,25 +43,37 @@ function App() {
   }
   
   return(
-    < >
+    < div className='backgroundd'>
     <div className='body'>
       <header>
           <h1 className='headtext'>Anime Schedules</h1>
       </header>
       <nav>
         <ul>
+        {(null===UserName || UserName.length===0) && (
+          <li onClick={(event)=>{
+            event.preventDefault();
+            }}>LogIn
+          </li>
+          )}
+          {!(null===UserName || UserName.length===0) && (
           <li onClick={(event)=>{
             event.preventDefault();
             setpage('Home');}}>Home
           </li>
+          )}
+          {!(null===UserName || UserName.length===0) && (
           <li onClick={(event)=>{
               event.preventDefault();
               setpage('Search');}}>Search
           </li>
+          )}
+          {!(null===UserName || UserName.length===0) && (
           <li onClick={(event)=>{
               event.preventDefault();
               setpage('About');}}>About
           </li>
+          )}
         </ul>
         <p >{UserName}</p>
         {(null!==UserName && UserName.length>0) &&(
@@ -69,10 +81,10 @@ function App() {
         )}
       </nav>
       </div>
-      <div>
+      <div >
         {showPage()}
       </div>
-    </>
+    </div>
   )
 }
 
