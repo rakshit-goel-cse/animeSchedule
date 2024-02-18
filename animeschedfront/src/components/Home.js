@@ -38,9 +38,10 @@ function Home() {
 
   return (
     <div>
-        {(data.length > 0) && (
+        {(data.length > 0) ? (
         <ShowData data={data} setdata={setdata} ishome/>
-        )}
+        ):
+        (<div>no data</div>)}
             
     </div>
   );
